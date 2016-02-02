@@ -86,14 +86,15 @@ WSGI_APPLICATION = 'testsilicon.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE'    : 'django.db.backends.postgresql_psycopg2',
-        'NAME'      : 'uploadimage',
+        'NAME'      : 'd3fond6dlacn1a',
         'USER'      : 'postgres',
-        'PASSWORD'  : 'lacaigi',
-        'HOST'      : '127.0.0.1',
+        'PASSWORD'  : 'iobtcouotrpymn:8SiMdeB4pt7Xk3tE8urR_hAcmN',
+        'HOST'      : 'ec2-54-235-152-114.compute-1.amazonaws.com',
         'PORT'      : '5432',
         'AUTOCOMMIT': True,
     },
 }
+
 
 
 # Password validation

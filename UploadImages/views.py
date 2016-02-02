@@ -250,7 +250,7 @@ def notification(request):
 
 		request_context = RequestContext(request)
 		request_context.push({'notification': notif})
-		request_context.push({'count': len(notif)})
+		request_context.push({'count': count})
 		request_context.push({'total_unread': notif_unread})
 		
 		# Update notification to read on page		

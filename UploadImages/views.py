@@ -246,10 +246,13 @@ def notification(request):
 		notif = Notification.objects.filter(user=user_id).order_by('-created_at')
 		notif,count= paginator(notif, page)
 
+		notif_unread = Notification.objects.filter(user=user_id, is_view=0).count()
+
 		request_context = RequestContext(request)
 		request_context.push({'notification': notif})
 		request_context.push({'count': len(notif)})
-
+		request_context.push({'total_unread': notif_unread})
+		
 		# Update notification to read on page		
 		Notification.objects.filter(id__in=notif.object_list.values('id')).filter(is_view=0).update(is_view=1)
 		
